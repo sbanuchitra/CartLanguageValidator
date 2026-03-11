@@ -1,0 +1,50 @@
+# ===============================
+# Maven Build Files
+# ===============================
+target/
+*.class
+
+# ===============================
+# Eclipse Files
+# ===============================
+.project
+.classpath
+.settings/
+.metadata/
+
+# ===============================
+# IntelliJ Files (optional)
+# ===============================
+.idea/
+*.iml
+
+# ===============================
+# VS Code Files (optional)
+# ===============================
+.vscode/
+
+# ===============================
+# OS Files
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Logs
+# ===============================
+*.log
+
+# ===============================
+# Excel Input / Output Files
+# ===============================
+cart_language_input.xlsx
+cart_language_validation_output.xlsx
+
+# or ignore all Excel files
+# *.xlsx
+
+# ===============================
+# Temporary Files
+# ===============================
+*.tmp
+*.swp
