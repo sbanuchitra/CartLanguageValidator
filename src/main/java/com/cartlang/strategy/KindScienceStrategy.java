@@ -4,7 +4,6 @@ import com.cartlang.model.OfferGrid;
 
 public class KindScienceStrategy implements CartLanguageStrategy {
 
-    @Override
     public String generateCartLanguage(OfferGrid offer) {
 
         String productType = offer.getType();
@@ -20,7 +19,7 @@ public class KindScienceStrategy implements CartLanguageStrategy {
             shipping = "$" + shipping;
         }
 
-        if (productType.equalsIgnoreCase("90days")) {
+        if (productType.equalsIgnoreCase("90 days")) {
 
             return "I understand that three months after my first order is shipped, and then approximately every three months thereafter, "
                     + "I will continue to automatically receive a full size supply of Kind Science® "
@@ -33,7 +32,7 @@ public class KindScienceStrategy implements CartLanguageStrategy {
                     + "I can choose to easily cancel by visiting kindscience.com/account.";
         }
 
-        else if (productType.equalsIgnoreCase("30days")) {
+        else if (productType.equalsIgnoreCase("30 days")) {
 
             return "I understand that one month after my first order is shipped, and then approximately every three months thereafter, "
                     + "I will continue to automatically receive a full size supply of Kind Science® "
@@ -46,7 +45,7 @@ public class KindScienceStrategy implements CartLanguageStrategy {
                     + "I can choose to easily cancel by visiting kindscience.com/account.";
         }
 
-        else if (productType.equalsIgnoreCase("62days")) {
+        else if (productType.equalsIgnoreCase("62 days")) {
 
             return "I understand that two months after my first order is shipped, and then approximately every two months thereafter, "
                     + "I will continue to automatically receive a Kind Science® "

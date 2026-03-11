@@ -4,7 +4,6 @@ import com.cartlang.model.OfferGrid;
 
 public class JloBeautyStrategy implements CartLanguageStrategy {
 
-    @Override
     public String generateCartLanguage(OfferGrid offer) {
 
         String productType = offer.getType();

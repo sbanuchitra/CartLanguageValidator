@@ -4,7 +4,6 @@ import com.cartlang.model.OfferGrid;
  
 public class SmileActivesStrategy implements CartLanguageStrategy {
  
-    @Override
     public String generateCartLanguage(OfferGrid offer) {
         String productType = safe(offer.getType());
         String bundleName = safe(offer.getBundleName());

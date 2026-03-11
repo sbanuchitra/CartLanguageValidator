@@ -12,6 +12,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
  
@@ -21,12 +24,14 @@ public class CartLanguageValidatorApp {
  
         ExcelService excelService = new ExcelService();
         ValidationService validationService = new ValidationService();
+        Path path = Paths.get("cart_language_input.xlsx");
  
         try (
  
-                InputStream fis = CartLanguageValidatorApp.class
-                        .getClassLoader()
-                        .getResourceAsStream("input/cart_language_input.xlsx");
+//               InputStream fis = CartLanguageValidatorApp.class
+//                       .getClassLoader()
+//                       .getResourceAsStream("input/cart_language_input.xlsx");
+        		InputStream fis = Files.newInputStream(path);
  
                 XSSFWorkbook inputWorkbook = new XSSFWorkbook(fis)
  
@@ -70,7 +75,6 @@ public class CartLanguageValidatorApp {
             int rowIndex = 1;
  
             for (OfferGrid offer : offers) {
- 
                 ValidationResult result = validationService.validate(offer, productMap);
  
                 Row row = outputSheet.createRow(rowIndex++);
